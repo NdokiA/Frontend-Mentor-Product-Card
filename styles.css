@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /*Primary*/
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    
+    /*Neutral*/
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--cream);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    color: var(--dark-grayish-blue);
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 34rem;
+    width: 100%;
+}
+
+.card{
+    background-color: var(--white);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+}
+
+.card .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.card .content{
+    padding: 0.5rem 0.5rem;
+
+    margin: 1rem;
+}
+
+.card .product{
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+}
+
+.card h1{
+    font-family: 'Fraunces', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--very-dark-blue);
+    padding: 1rem 0rem;
+    margin-right: 2rem;
+    line-height: 2rem;
+
+}
+
+.card .desc{
+    margin-right: 1.5rem;
+    line-height: 1.2rem;
+}
+
+.card .price{
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.card .price .discount{
+    color: var(--dark-cyan);
+    font-family: 'Fraunces', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.card .price .original {
+    margin-left: 1rem;
+    text-decoration: line-through;
+}
+
+.card button {
+    width: 100%; /* Full width for mobile design */
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--white);
+    background-color: var(--dark-cyan);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.card button img{
+    margin-right: 1rem;
+}
+
+.card button:hover{
+    background-color: #1A4031;
+}
+
+@media screen and (max-width: 768px){
+    .card{
+        flex-direction: column;
+    }
+    .card .image img{
+        height: auto;
+        width: 100%;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 1rem;
+    }
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    position: relative;
+ }
+.attribution a { color: hsl(228, 45%, 44%); }
